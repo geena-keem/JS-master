@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="test.js" defer></script>
+</head>
+<body>
+    <!-- body 끝에 script 넣었을 때 -->
+    <script>
+        // DOMContentLoaded: only document만 즉, HTML만 다 완료가 되면 호출된다.
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOMContentLoaded');
+        });
+
+        // load: after resources 즉, 페이지 안에서 쓰여지고 있는 폰트나 이미지 같은 것들 CSS나 모든 리소스들이 다 다운로드가 완료되면 호출된다.
+        window.addEventListener('load', () => {
+            console.log('load');
+        });
+
+        
+        // beforeunload: before unload. 브라우저에서 사용자가 페이지를 나갈 때 나가기 전에 불려지는 함수
+        window.addEventListener('beforeunload', () => {
+            console.log('beforeunload');
+        });
+
+        // unload: resource is being unloaded (리소스같은 것들이 unloaded가 됐을 때) load가 안될 때, 즉 페이지가 끝날 때 호출된다.
+        window.addEventListener('unload', () => {
+            console.log('unload');
+        });
+    </script>
+</body>
+</html>
