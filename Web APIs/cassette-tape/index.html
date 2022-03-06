@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        button {
+            outline: none;
+            font-size: 20px;
+            margin: 30px 0 0;
+            cursor: pointer;
+        }
+
+        #black {
+            width: 385px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">FIND A BLACK 📼</button>
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img id="black" src="img/black.png" alt="black">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+    <img src="img/white.png" alt="white">
+
+    <script>
+        const button = document.querySelector('.btn');
+        const black = document.querySelector('#black');
+
+        button.addEventListener('click', (evnet) => {
+            black.scrollIntoView({behavior: 'smooth', block: 'center'});
+            // ** scrollIntoView option **
+            // behavior transition animation 'auto(default)', 'behavior'
+            // block vertical alignment 'start(default)', 'center', 'end', 'nearest'
+            // inline horizontal alignment 'start', 'center', 'end', 'nearest(default)'
+        });
+    </script>
+</body>
+</html>
